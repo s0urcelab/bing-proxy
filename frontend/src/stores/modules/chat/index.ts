@@ -21,7 +21,7 @@ export const useChatStore = defineStore(
     const chatHubPath = '/sydney/ChatHub';
 
     const isShowChatServiceSelectModal = ref(false);
-    const selectedSydneyBaseUrl = ref(location.origin);
+    const selectedSydneyBaseUrl = ref('https://cf-bing-api.src.moe');
     const sydneyConfigs = ref<SydneyConfig[]>([
       {
         baseUrl: 'https://sydney.bing.com',
@@ -30,10 +30,6 @@ export const useChatStore = defineStore(
       {
         baseUrl: 'https://cf-bing-api.src.moe',
         label: 'Cloudflare',
-      },
-      {
-        baseUrl: location.origin,
-        label: '本站',
       },
       {
         baseUrl: '',
