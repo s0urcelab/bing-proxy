@@ -21,14 +21,14 @@ export const useChatStore = defineStore(
     const chatHubPath = '/sydney/ChatHub';
 
     const isShowChatServiceSelectModal = ref(false);
-    const selectedSydneyBaseUrl = ref('');
+    const selectedSydneyBaseUrl = ref(location.origin);
     const sydneyConfigs = ref<SydneyConfig[]>([
       {
         baseUrl: 'https://sydney.bing.com',
         label: 'Bing 官方',
       },
       {
-        baseUrl: 'https://sydney.vcanbb.chat',
+        baseUrl: 'https://cf-bing-api.src.moe',
         label: 'Cloudflare',
       },
       {
